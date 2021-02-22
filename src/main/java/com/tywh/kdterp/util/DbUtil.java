@@ -1,14 +1,13 @@
 package com.tywh.kdterp.util;
 
 import java.sql.*;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
 public class DbUtil {
 
  //   private static ThreadLocal<Connection> threadLocal = new ThreadLocal<>();
-    private static Map<String, Connection> connMap = Collections.unmodifiableMap(new HashMap<>());
+    private static Map<String, Connection> connMap = new HashMap<>();
 
     public static Connection getConnection() throws Exception {
 
